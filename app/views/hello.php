@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<script src="scripts/vendor/angular.js"></script>
+	<script src="scripts/vendor/angular-route.js"></script>
 	<title>Laravel PHP Framework</title>
 	<style>
 		@import url(//fonts.googleapis.com/css?family=Lato:700);
