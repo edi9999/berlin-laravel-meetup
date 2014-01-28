@@ -1,21 +1,27 @@
-## Laravel PHP Framework
+This repo was used for the [January Laravel Meetup](http://www.meetup.com/Laravel-Brussels/events/148656682/)
+It aims to show what is possible with the Laravel Framework, combined with the AngularJS Framework.
 
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)
+# The App
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+The app we're going to build is a shopping list app.
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+## Basic functionality (will be implemented at the beginning, during the 20 first minutes)
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+- Adding an item
+- Viewing items
+- Checking/Unchecking item
+- Deleting item
+- Grouping items by checked/unchecked
 
-## Official Documentation
+## Advanced features (you choose which one you'd like to see)
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+- Grouping items by type: vegetables, meat, fish, ...   --- *uses relationships*
+- Creating multiple lists                               --- *uses nested resources URL: lists/5/items*
 
-### Contributing To Laravel
+## More advanced features
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+- Laravel API security                                  --- *uses filters*
+- Rate limiting                                         --- *uses filters*
 
-### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
