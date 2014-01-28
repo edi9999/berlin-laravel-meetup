@@ -24,4 +24,15 @@ The app we're going to build is a shopping list app.
 - Rate limiting                                         --- *uses filters*
 
 
+# What I did step by step
+
+
+
+- running composer [done]
+- importing vendor files in public/js/vendor [done]
+- importing jeffrey ways generator tool: https://github.com/JeffreyWay/Laravel-4-Generators [done]
+- run command: php artisan generate:scaffold item --fields="name:string,number:int,checked:boolean"
+- run migration and seeding
+
+
 

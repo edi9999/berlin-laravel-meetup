@@ -15,3 +15,11 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+
+/*
+ * Todo: create a basic route for showing items
+ */
+
+
+Route::resource('items', 'ItemsController');
