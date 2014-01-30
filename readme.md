@@ -19,6 +19,8 @@ There's a very interesting article about DOM-caching in angular:  [http://blog.s
 
 To bind html instead of just text (but the input still gets sanitized, so the script tags will be removed), you have to use `ng-bind-html` and trust the input using [http://docs.angularjs.org/api/ng.$sceDelegateProvider](http://docs.angularjs.org/api/ng.$sceDelegateProvider).resourceUrlWhitelist(['self',...]);
 
+Have a look at the Batarang Chrome extension, which creates a special tab in Chrome Developper tools to debug your AngularJS App (and shows which parts aren't performant) [https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk)
+
 
 ## Advanced features (you choose which one you'd like to see)
 
