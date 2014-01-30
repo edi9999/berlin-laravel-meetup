@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('hello')->with("_token",Session::token());
 });
 
 
@@ -21,5 +21,4 @@ Route::get('/', function()
  * Todo: create a basic route for showing items
  */
 
-
-Route::resource('items', 'ItemsController');
+		Route::resource('items', 'ItemsController');

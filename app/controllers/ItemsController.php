@@ -21,20 +21,9 @@ class ItemsController extends BaseController {
 	 */
 	public function index()
 	{
-		$items = $this->item->all();
-
-		return View::make('items.index', compact('items'));
+		return Item::all();
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		return View::make('items.create');
-	}
 
 	/**
 	 * Store a newly created resource in storage.
@@ -44,19 +33,7 @@ class ItemsController extends BaseController {
 	public function store()
 	{
 		$input = Input::all();
-		$validation = Validator::make($input, Item::$rules);
-
-		if ($validation->passes())
-		{
-			$this->item->create($input);
-
-			return Redirect::route('items.index');
-		}
-
-		return Redirect::route('items.create')
-			->withInput()
-			->withErrors($validation)
-			->with('message', 'There were validation errors.');
+		return Item::create($input);
 	}
 
 	/**
@@ -98,21 +75,9 @@ class ItemsController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$input = array_except(Input::all(), '_method');
-		$validation = Validator::make($input, Item::$rules);
-
-		if ($validation->passes())
-		{
-			$item = $this->item->find($id);
-			$item->update($input);
-
-			return Redirect::route('items.show', $id);
-		}
-
-		return Redirect::route('items.edit', $id)
-			->withInput()
-			->withErrors($validation)
-			->with('message', 'There were validation errors.');
+		$item=Item::find($id);
+		$item->fill(Input::all())->save();
+		return $item;
 	}
 
 	/**
@@ -123,9 +88,9 @@ class ItemsController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		$this->item->find($id)->delete();
+		Item::find($id)->delete();
 
-		return Redirect::route('items.index');
+		return $id;
 	}
 
 }

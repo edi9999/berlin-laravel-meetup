@@ -8,4 +8,9 @@ class Item extends Eloquent {
 		//'number' => 'required',
 		//'checked' => 'required'
 	);
+
+	public function getCheckedAttribute($value)
+	{
+		return (boolean) $value;
+	}
 }
