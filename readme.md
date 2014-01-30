@@ -13,6 +13,13 @@ The app we're going to build is a shopping list app.
 - Deleting item
 - Grouping items by checked/unchecked
 
+## Advanced articles to answer questions more specifically
+
+There's a very interesting article about DOM-caching in angular:  [http://blog.scalyr.com/2013/10/31/angularjs-1200ms-to-35ms/](http://blog.scalyr.com/2013/10/31/angularjs-1200ms-to-35ms/)
+
+To bind html instead of just text (but the input still gets sanitized, so the script tags will be removed), you have to use `ng-bind-html` and trust the input using [http://docs.angularjs.org/api/ng.$sceDelegateProvider](http://docs.angularjs.org/api/ng.$sceDelegateProvider).resourceUrlWhitelist(['self',...]);
+
+
 ## Advanced features (you choose which one you'd like to see)
 
 - Grouping items by type: vegetables, meat, fish, ...   --- *uses relationships*
@@ -22,7 +29,6 @@ The app we're going to build is a shopping list app.
 
 - Laravel API security                                  --- *uses filters*
 - Rate limiting                                         --- *uses filters*
-
 
 # What I did step by step
 

@@ -7,6 +7,7 @@
 	<script src="js/vendor/angular.js"></script>
 	<script src="js/vendor/angular-route.js"></script>
 	<script src="js/vendor/angular-resource.js"></script>
+	<script src="js/vendor/angular-sanitize.js"></script>
 <script>
 		App={};
 		App.token= "<?php echo $_token; ?>";
