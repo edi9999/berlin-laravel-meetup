@@ -20,19 +20,16 @@
 <ul>
 	<li ng-repeat="item in items"> 
 
-		<span ng-if="!item.editing"  ng-bind-html="item.name"></span>
+		<span ng-if="!item.editing"  ng-bind="item.name"></span>
 		<span ng-if="item.editing"> 
 			<input type="text" ng-model="item.name"/>		
 </span>
-		
-
 		<input type="checkbox" ng-model="item.checked"/>
 		<a ng-click="toggleEdit(item)" href="#">Edit me</a>
 		<a ng-click="delete(item)" href="#">Delete me</a>
 	</li>
 	<form ng-submit="addItem(newItem)" ng-valid="">
 		<input type="text" ng-model="newItem" ng-valid="text">
-		<input type="number" ng-model="newItem" ng-valid="number">
 	</form>
 </ul>
 

@@ -21,4 +21,7 @@ Route::get('/', function()
  * Todo: create a basic route for showing items
  */
 
+Route::group(array("before"=>"csrf"),function()
+	{
 		Route::resource('items', 'ItemsController');
+	});

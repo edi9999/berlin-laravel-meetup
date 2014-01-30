@@ -10,7 +10,7 @@ function ItemController($scope,$http)
 
 	$scope.addItem=function(newItem)
 	{
-		$http.post("items?name="+newItem).success(function(r)
+		$http.post("items?name="+newItem+"&_token="+App.token).success(function(r)
 		{
 			$scope.items.push(r);
 		});
@@ -18,7 +18,7 @@ function ItemController($scope,$http)
 
 	$scope.delete=function(item)
 	{
-		$http.delete("items/"+item.id).success(function(r)
+		$http.delete("items/"+item.id+"?_token="+App.token).success(function(r)
 		{
 			var i=$scope.items.indexOf(item);
  			$scope.items.splice(i,1);
@@ -29,7 +29,7 @@ function ItemController($scope,$http)
 	{
 		if(item.editing)
 		{
-			$http.put("items/"+item.id+"?name="+item.name+"&checked="+item.checked).
+			$http.put("items/"+item.id+"?name="+item.name+"&checked="+item.checked+"&_token="+App.token).
 				success(function(r){
 					item.editing=false;
 				})
