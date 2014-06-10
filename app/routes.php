@@ -16,11 +16,6 @@ Route::get('/', function()
 	return View::make('hello')->with("_token",Session::token());
 });
 
-
-/*
- * Todo: create a basic route for showing items
- */
-
 Route::group(array("before"=>"csrf"),function()
 	{
 		Route::resource('items', 'ItemsController');
