@@ -16,7 +16,4 @@ Route::get('/', function()
 	return View::make('hello')->with("_token",Session::token());
 });
 
-Route::group(array("before"=>"csrf"),function()
-	{
-		Route::resource('items', 'ItemsController');
-	});
+Route::resource('items', 'ItemsController');

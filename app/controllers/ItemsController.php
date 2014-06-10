@@ -3,18 +3,6 @@
 class ItemsController extends BaseController {
 
 	/**
-	 * Item Repository
-	 *
-	 * @var Item
-	 */
-	protected $item;
-
-	public function __construct(Item $item)
-	{
-		$this->item = $item;
-	}
-
-	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
@@ -32,39 +20,7 @@ class ItemsController extends BaseController {
 	 */
 	public function store()
 	{
-		$input = Input::all();
-		return Item::create($input);
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		$item = $this->item->findOrFail($id);
-
-		return View::make('items.show', compact('item'));
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		$item = $this->item->find($id);
-
-		if (is_null($item))
-		{
-			return Redirect::route('items.index');
-		}
-
-		return View::make('items.edit', compact('item'));
+		return Item::create(Input::all());
 	}
 
 	/**
@@ -89,7 +45,6 @@ class ItemsController extends BaseController {
 	public function destroy($id)
 	{
 		Item::find($id)->delete();
-
 		return $id;
 	}
 
