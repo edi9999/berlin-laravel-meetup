@@ -1,7 +1,7 @@
 <?php
 
 class Item extends Eloquent {
-	protected $guarded = array();
+	protected $guarded = array('editing');
 
 	public static $rules = array(
 		'name' => 'required',

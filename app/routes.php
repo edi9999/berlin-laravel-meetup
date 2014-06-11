@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello')->with("_token",Session::token());
+	return View::make('hello');
 });
 
 Route::resource('items', 'ItemsController');
